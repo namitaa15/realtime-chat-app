@@ -1,0 +1,194 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+#root {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;    /* Vertically center */
+  justify-content: center;/* Horizontally center */
+}
+.app-container {
+  width: 100%;
+  max-width: 470px;
+  min-height: 610px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 32px;
+  box-shadow: 0 10px 44px 0 #84c1fa50;
+  border: 1.5px solid #e1e7ef;
+  padding: 44px 30px 26px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  backdrop-filter: blur(2.2px);
+}
+
+.heading-main {
+  text-align: center;
+  color: #0d2b50;
+  margin-bottom: 14px;
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: 2.2px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-shadow: 0 4px 24px #7fc4f866, 0 2px 0 #f3f3ff;
+}
+
+/* Username form fully centered */
+.username-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  width: 100%;
+}
+
+/* Username input centered and wide */
+.username-input {
+  padding: 14px 24px;
+  border: 1.8px solid #86b5fa;
+  border-radius: 28px;
+  font-size: 1.09rem;
+  outline: none;
+  margin-bottom: 18px;
+  width: 95%;
+  max-width: 320px;
+  background: rgba(248, 251, 255, 0.98);
+  box-shadow: 0 2px 8px #bcdcf8cc;
+  transition: border 0.2s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.username-input:focus {
+  border: 2.2px solid #36b3ff;
+}
+
+/* JOIN/SEND button: modern, wide, center */
+.join-btn,
+.send-btn {
+  display: block;
+  margin: 0 auto 12px auto;
+  padding: 15px 0;
+  width: 94%;
+  max-width: 200px;
+  border-radius: 32px;
+  background: linear-gradient(90deg, #2466e8 0%, #44bbff 100%);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  font-size: 1.15rem;
+  box-shadow: 0 3px 18px #80bfff40;
+  cursor: pointer;
+  letter-spacing: 1.1px;
+  transition: background 0.23s, transform 0.11s, box-shadow 0.15s;
+  outline: none;
+}
+
+.join-btn:hover,
+.send-btn:hover {
+  background: linear-gradient(90deg, #1870ed 0%, #00b4ff 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 5px 24px #1e8fff66;
+}
+
+
+/* Chat window */
+.chat-window {
+  border: none;
+  box-shadow: 0 2px 16px #d0dbef44;
+  border-radius: 22px;
+  height: 355px;
+  background: rgba(245, 250, 255, 0.97);
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding: 22px 15px 10px 17px;
+}
+
+/* Messages look */
+.message-bubble {
+  background: #e3f4fc;
+  border-radius: 18px;
+  margin: 12px 0;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 7px #e0e7ef33;
+  font-size: 1.08rem;
+  animation: popIn 0.3s;
+  min-height: 38px;
+}
+@keyframes popIn {
+  from {transform: scale(0.96);}
+  to {transform: scale(1);}
+}
+.message-bubble.alt {
+  background: #ffeabf;
+}
+.message-username {
+  color: #1975c8;
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 1.03em;
+}
+.message-text {
+  flex: 1;
+  color: #22334b;
+}
+.message-time {
+  color: #bbb;
+  font-size: 14px;
+  margin-left: 16px;
+}
+
+/* Message input row, full centre, vertical on mobile */
+.message-input-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+  width: 100%;
+}
+
+/* Input box clean and wide */
+.message-input-box {
+  width: 95%;
+  max-width: 320px;
+  border: 1.8px solid #a6c4e6;
+  border-radius: 24px;
+  padding: 15px 20px;
+  font-size: 1.09rem;
+  background: rgba(248, 251, 255, 0.94);
+  box-shadow: 0 2px 6px #d0dbef33;
+  outline: none;
+  margin: 0 auto 0 auto;
+  display: block;
+}
+
+.message-input-box:focus {
+  border: 2.2px solid #36b3ff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  background: #e7eaf7;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #b5cde4;
+  border-radius: 8px;
+}
